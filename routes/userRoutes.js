@@ -2,10 +2,8 @@ const express = require('express');
 const router = express.Router();
 const userController = require('../controllers/userController');
 
-// POST create user
 router.post('/', userController.AddUser);
-
-// GET all users (optionnel)
 router.get('/', userController.getAllUsers);
-
+router.delete('/:mdp', userController.deleteUser);
+router.put('/:mdp', userController.updateUser);
 module.exports = router;

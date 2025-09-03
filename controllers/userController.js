@@ -68,25 +68,29 @@ exports.createUser = async (req, res) => {
     }
 };
 
+// controllers/userController.js
 exports.updateUser = async (req, res) => {
     try {
-        const updatedUser = await user.findByIdAndUpdate(
-            req.params.id,
-            req.body,
-            { new: true }
+        const updatedUser = await user.findOneAndUpdate(
+            { mdp: req.params.mdp },  // recherche par mdp
+            req.body,                 // données à mettre à jour
+            { new: true }             // retourne la version mise à jour
         );
+
         if (!updatedUser) {
             return res.status(404).json({ message: 'User not found' });
         }
+
         res.json(updatedUser);
     } catch (err) {
         res.status(500).json({ message: 'error', error: err.message });
     }
 };
 
+
 exports.deleteUser = async (req, res) => {
     try {
-        const deletedUser = await user.findByIdAndDelete(req.params.id);
+        const deletedUser = await user.findByIdAndDelete(req.params.mdp);
         if (!deletedUser) {
             return res.status(404).json({ message: 'User not found' });
         }
