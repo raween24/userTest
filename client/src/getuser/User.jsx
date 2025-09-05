@@ -4,7 +4,7 @@ const User = () => {
     const users = [
     { id: 1, name: 'Rawen', email: 'rawen@example.com' },
     { id: 2, name: 'Alice', email: 'alice@example.com' },
-    { id: 3, name: 'Bob', email: 'bob@example.com' },
+    { id: 3, name: 'ch  wki', email: 'chawki@hello.com' },
   ];
   return (
     <div className='container mt-5'>
