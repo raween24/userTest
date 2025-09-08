@@ -1,0 +1,31 @@
+.userTable {
+    width: 80%;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    font-size: 14px;
+}
+
+.userTable table td, 
+.userTable table th {
+    padding: 8px 12px;
+}
+
+.addUserButton {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+.userTable table thead th {
+    background-color: darkcyan;
+    color: azure;
+
+}
+.userTable table body td {
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
