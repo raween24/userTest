@@ -1,10 +1,14 @@
 import './App.css';
-import User from './getuser/User';
+import { BrowserRouter } from 'react-router-dom'; // ← ajoute cette ligne
+import User from './getuser/User.jsx';
+
 function App() {
   return (
-    <div className="App">
-      <User/>
-    </div>
+    <BrowserRouter> {/* ← entoure ton app ici */}
+      <div className="App">
+        <User />
+      </div>
+    </BrowserRouter>
   );
 }
 

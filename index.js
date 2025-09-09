@@ -7,7 +7,6 @@ require('dotenv').config();
 
 // Routes
 const userRoutes = require('./routes/userRoutes');
-const interventionRoutes = require('./API/routeAPI/interventionRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -38,7 +37,6 @@ app.get('/', (req, res) => {
 // API Routes
 // ---------------------
 app.use('/api/users', userRoutes);
-app.use('/api/interventions', interventionRoutes);
 
 // ---------------------
 // Error Handling Middleware (recommended)
